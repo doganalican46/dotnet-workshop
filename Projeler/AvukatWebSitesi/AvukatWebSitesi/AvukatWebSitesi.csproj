@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AE1072B-75CA-4B3E-AB2B-EB65AEA32B36}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvukatWebSitesi</RootNamespace>
+    <AssemblyName>AvukatWebSitesi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\FaydaliLinkler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Hakkimda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Hizmetlerimiz.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\IletisimBilgileri.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Mesajlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OfisSaatleri.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\ProfYetkinveDiller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SosyalMedyalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Avukat_web\about.html" />
+    <Content Include="Avukat_web\admin\about.html" />
+    <Content Include="Avukat_web\admin\assets\favicon.ico" />
+    <Content Include="Avukat_web\admin\blogs.html" />
+    <Content Include="Avukat_web\admin\css\styles.css" />
+    <Content Include="Avukat_web\admin\index.html" />
+    <Content Include="Avukat_web\admin\js\scripts.js" />
+    <Content Include="Avukat_web\admin\layout.html" />
+    <Content Include="Avukat_web\admin\login.html" />
+    <Content Include="Avukat_web\admin\mesajlar.html" />
+    <Content Include="Avukat_web\admin\settings.html" />
+    <Content Include="Avukat_web\admin\sifre.html" />
+    <Content Include="Avukat_web\assets\1.png" />
+    <Content Include="Avukat_web\assets\ailehukugu.jpeg" />
+    <Content Include="Avukat_web\assets\ceza hukugu.jpeg" />
+    <Content Include="Avukat_web\assets\favicon.ico" />
+    <Content Include="Avukat_web\assets\logolar\adaletbakanligilogo.png" />
+    <Content Include="Avukat_web\assets\logolar\barolarbirligi.png" />
+    <Content Include="Avukat_web\assets\logolar\edevlet.png" />
+    <Content Include="Avukat_web\assets\logolar\tbmm logo.png" />
+    <Content Include="Avukat_web\assets\logolar\yargıtay.png" />
+    <Content Include="Avukat_web\assets\profile.png" />
+    <Content Include="Avukat_web\assets\resim1-removebg-preview.png" />
+    <Content Include="Avukat_web\assets\resim1.jpg" />
+    <Content Include="Avukat_web\assets\resim2.png" />
+    <Content Include="Avukat_web\assets\sigorta hukugu.jpeg" />
+    <Content Include="Avukat_web\assets\ticarethukugu.jpeg" />
+    <Content Include="Avukat_web\contact.html" />
+    <Content Include="Avukat_web\css\styles.css" />
+    <Content Include="Avukat_web\index.html" />
+    <Content Include="Avukat_web\js\index.html" />
+    <Content Include="Avukat_web\js\scripts.js" />
+    <Content Include="Avukat_web\layout.html" />
+    <Content Include="Avukat_web\projects.html" />
+    <Content Include="Avukat_web\resume.html" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Entity\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Entity\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Entity\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Entity\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Avukat_web\.git\COMMIT_EDITMSG" />
+    <Content Include="Avukat_web\.git\config" />
+    <Content Include="Avukat_web\.git\description" />
+    <Content Include="Avukat_web\.git\FETCH_HEAD" />
+    <Content Include="Avukat_web\.git\HEAD" />
+    <Content Include="Avukat_web\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Avukat_web\.git\hooks\commit-msg.sample" />
+    <Content Include="Avukat_web\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="Avukat_web\.git\hooks\post-update.sample" />
+    <Content Include="Avukat_web\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Avukat_web\.git\hooks\pre-commit.sample" />
+    <Content Include="Avukat_web\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="Avukat_web\.git\hooks\pre-push.sample" />
+    <Content Include="Avukat_web\.git\hooks\pre-rebase.sample" />
+    <Content Include="Avukat_web\.git\hooks\pre-receive.sample" />
+    <Content Include="Avukat_web\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Avukat_web\.git\hooks\push-to-checkout.sample" />
+    <Content Include="Avukat_web\.git\hooks\sendemail-validate.sample" />
+    <Content Include="Avukat_web\.git\hooks\update.sample" />
+    <Content Include="Avukat_web\.git\index" />
+    <Content Include="Avukat_web\.git\info\exclude" />
+    <Content Include="Avukat_web\.git\logs\HEAD" />
+    <Content Include="Avukat_web\.git\logs\refs\heads\main" />
+    <Content Include="Avukat_web\.git\logs\refs\remotes\origin\main" />
+    <Content Include="Avukat_web\.git\objects\05\0942f09bba656d938017685ed9ce620790ba3e" />
+    <Content Include="Avukat_web\.git\objects\05\a987ca0ab28213325e1db74a2680c2322440f8" />
+    <Content Include="Avukat_web\.git\objects\15\3a86926766fcf0a395adaa5022ef594fa2e270" />
+    <Content Include="Avukat_web\.git\objects\17\cff272f7e55badf660c61ea3098be18784a818" />
+    <Content Include="Avukat_web\.git\objects\1d\49bfd736ac81c0f4a1340c0eb0fe229fbecfd9" />
+    <Content Include="Avukat_web\.git\objects\22\3304c846547780e75a29c32cee3b5121ea6d9b" />
+    <Content Include="Avukat_web\.git\objects\32\92dceb82bc02bf3ab5754a81c08bcd5367f04c" />
+    <Content Include="Avukat_web\.git\objects\35\ab18abae05c461fdf4e89665ccbc45971fcc55" />
+    <Content Include="Avukat_web\.git\objects\37\b2b3a1595f01bba3cb870df5f6e58e8a040d40" />
+    <Content Include="Avukat_web\.git\objects\39\4e1933f102bfd6c19bdd539f9630871b51a367" />
+    <Content Include="Avukat_web\.git\objects\39\7ba40fba7cdad5c72b369a1627d15f4f86141a" />
+    <Content Include="Avukat_web\.git\objects\3c\cb24e3187db1157bb57d5dfd501d48818fd6e3" />
+    <Content Include="Avukat_web\.git\objects\3e\03b508e823a7bfc516a4c48d3b055eee8245d7" />
+    <Content Include="Avukat_web\.git\objects\48\79d43f11055c69679f6baf0a145dfea328f9cc" />
+    <Content Include="Avukat_web\.git\objects\49\85d80266c9b89222d970858acdf3272f7ddcaf" />
+    <Content Include="Avukat_web\.git\objects\4e\3a14de9e4063146fd3365dfc8f3def42c2c002" />
+    <Content Include="Avukat_web\.git\objects\52\28f2794d37bd3a77e22036fb2b703fc5fdd4a4" />
+    <Content Include="Avukat_web\.git\objects\56\31252be821015d55468fc2dbb799c31a28b07d" />
+    <Content Include="Avukat_web\.git\objects\56\d07493b1b6682070c9d38671f312e6c4115a79" />
+    <Content Include="Avukat_web\.git\objects\56\ff341774bb0a80f929d37b3c1fd5cd62858b3d" />
+    <Content Include="Avukat_web\.git\objects\60\4d408b2d958fda25b4b180ddc37789ed7e5c8f" />
+    <Content Include="Avukat_web\.git\objects\62\7f6d1b8710619df202ed467206088a3435f19e" />
+    <Content Include="Avukat_web\.git\objects\64\2db7b26e96f883bcae1c2884186df17972b379" />
+    <Content Include="Avukat_web\.git\objects\67\6a6410e3ecee57b126e51da4a1a60f12dd1567" />
+    <Content Include="Avukat_web\.git\objects\67\7b8cd9f4d399de6a6099b5c3d4feb6c8a703e3" />
+    <Content Include="Avukat_web\.git\objects\6f\bf2f9361c555bdd0cffc871977927ac9ae048c" />
+    <Content Include="Avukat_web\.git\objects\74\e5cdd3ca28cd3178116881f51e9123370fba8c" />
+    <Content Include="Avukat_web\.git\objects\79\964e4727cb9564708bda031010675ed8734c8e" />
+    <Content Include="Avukat_web\.git\objects\7b\0513251b2a3b57fb0a8d4a176ea0fd58b321fa" />
+    <Content Include="Avukat_web\.git\objects\81\efcaabc7af6c08b13762189b8de258ad1c7927" />
+    <Content Include="Avukat_web\.git\objects\8a\702c776c92b183528ecf66dc03994487437fe3" />
+    <Content Include="Avukat_web\.git\objects\8a\e579824f3581efa187252b4add10724b2a7f47" />
+    <Content Include="Avukat_web\.git\objects\8d\64469f6e83853639d43dabb415a5fe572d8f76" />
+    <Content Include="Avukat_web\.git\objects\93\14266cf5f309b3b918d2aca8c730debcfe306f" />
+    <Content Include="Avukat_web\.git\objects\93\56735ca323587d5730a74bd017d9cb2153479b" />
+    <Content Include="Avukat_web\.git\objects\96\9b8e11adbfd210e0e47b438c6c6f2242e3e297" />
+    <Content Include="Avukat_web\.git\objects\9f\baaec0618404f0b3bfdb08e81f1d37a284e533" />
+    <Content Include="Avukat_web\.git\objects\a4\9c45496b48da4f48dfbfc404b8f91ba63b81a3" />
+    <Content Include="Avukat_web\.git\objects\a4\fbb1032ff4a18c8bf6aa2635245c798ca084f0" />
+    <Content Include="Avukat_web\.git\objects\af\32c379d79a337e6bf0ead17bcb31958955615b" />
+    <Content Include="Avukat_web\.git\objects\b0\dbe0d5eb739613c5c80948451616c87809c7e8" />
+    <Content Include="Avukat_web\.git\objects\b3\db236b209174be8064292967cd4f235700e4aa" />
+    <Content Include="Avukat_web\.git\objects\b7\89db0cbf1d17404b8aa26a36c76cf526fe4152" />
+    <Content Include="Avukat_web\.git\objects\b8\91cd54db985b1e0288f506aae573e11e912763" />
+    <Content Include="Avukat_web\.git\objects\c2\d9bb9d2277e5e2a416074351fd77131b5fa1bc" />
+    <Content Include="Avukat_web\.git\objects\c3\a7bd28ab3a7a1a4118efec15c2bb97f8388c0a" />
+    <Content Include="Avukat_web\.git\objects\c7\378db9b8d2045766bd76a1407437ad8d43a2bc" />
+    <Content Include="Avukat_web\.git\objects\c7\a38c3bafbe747568ade26ed796e1087080af8a" />
+    <Content Include="Avukat_web\.git\objects\c7\afe9a017fe708ff43e7a87269e1676eed74c6a" />
+    <Content Include="Avukat_web\.git\objects\cb\b05a6c974bb94735fa9be937600b176d0be981" />
+    <Content Include="Avukat_web\.git\objects\d4\baead1a3e13d87753ec127e4e8347a4c503788" />
+    <Content Include="Avukat_web\.git\objects\da\8626e92891c6a08d575e90b7bc6b6cd6999e26" />
+    <Content Include="Avukat_web\.git\objects\df\3295a91ba574dcce0be6f739c4ca7de5d6a0ad" />
+    <Content Include="Avukat_web\.git\objects\e2\b10f3f51688f493a9fd9440fd3ad40f11a44e0" />
+    <Content Include="Avukat_web\.git\objects\e7\468e8d222ddb6bea1aab79f8148e3d6c03c6a0" />
+    <Content Include="Avukat_web\.git\objects\e8\94db387641f36c77ca0107dfa8fc314b7dd1b8" />
+    <Content Include="Avukat_web\.git\objects\ec\43a12de37ab9b19e9eeee67007d26c1dbddf9a" />
+    <Content Include="Avukat_web\.git\objects\ed\77751f56e3b3e4ca6a5e8152bf3f3d1c166a8a" />
+    <Content Include="Avukat_web\.git\objects\ef\95ad23075c25cc1a6a025a9cb35a15bf813779" />
+    <Content Include="Avukat_web\.git\objects\f6\eb43700377ed280fb4239aa2ec106d03e4971e" />
+    <Content Include="Avukat_web\.git\objects\f8\84dc54bb87d07b06b2be4103488ceb203a5f4f" />
+    <Content Include="Avukat_web\.git\objects\f8\95e13ba8e1688b2f955b1408d5b05f02b5ef86" />
+    <Content Include="Avukat_web\.git\ORIG_HEAD" />
+    <Content Include="Avukat_web\.git\refs\heads\main" />
+    <Content Include="Avukat_web\.git\refs\remotes\origin\main" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_UserLayout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Avukat_web\.git\objects\info\" />
+    <Folder Include="Avukat_web\.git\objects\pack\" />
+    <Folder Include="Avukat_web\.git\refs\tags\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50510</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

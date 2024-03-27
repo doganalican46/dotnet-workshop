@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DogaYilmazModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DogaYilmaz.dbo.AnasayfaHakkimda' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AnasayfaHakkimda">
+          <Property Name="AltBaslik" Type="nvarchar" MaxLength="100" />
+          <Property Name="HakkimdaYazisi" Type="nvarchar" MaxLength="500" />
+        </EntityType>-->
+  <EntityType Name="FaydaliLinkler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Yazi" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="nvarchar" MaxLength="100" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Hakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tarih" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sehir" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gorev" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ozet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Tur" Type="bit" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DogaYilmaz.dbo.Harita' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Harita">
+          <Property Name="HaritaLink" Type="nvarchar" MaxLength="4000" />
+        </EntityType>-->
+  <EntityType Name="Hizmetlerimiz">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Yazi" Type="nvarchar" MaxLength="500" />
+    <Property Name="Resim" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="IletisimBilgileri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Deger" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Mesajlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="TelefonNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mesaj" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="OfisSaatleri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GunAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="SaatAraligi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProfYetkinveDiller">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tur" Type="bit" />
+    <Property Name="Durum" Type="bit" />
+  </EntityType>
+  <EntityType Name="SosyalMedyalar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Link" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="DogaYilmazModelStoreContainer">
+    <EntitySet Name="FaydaliLinkler" EntityType="Self.FaydaliLinkler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hakkimda" EntityType="Self.Hakkimda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hizmetlerimiz" EntityType="Self.Hizmetlerimiz" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IletisimBilgileri" EntityType="Self.IletisimBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mesajlar" EntityType="Self.Mesajlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OfisSaatleri" EntityType="Self.OfisSaatleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfYetkinveDiller" EntityType="Self.ProfYetkinveDiller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SosyalMedyalar" EntityType="Self.SosyalMedyalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
